@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220915 12:12:01.836" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\user\Desktop\Flipkart_Selenium\TestCase\TestCases.robot">
+<test id="s1-t1" name="User should be able to search a product" line="7">
+<kw name="Given Open flipkart Website" library="Instructions">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220915 12:12:02.299" level="INFO">Opening browser 'chrome' to base url 'https://www.flipkart.com/'.</msg>
+<status status="PASS" starttime="20220915 12:12:02.299" endtime="20220915 12:12:11.827"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220915 12:12:11.827" endtime="20220915 12:12:12.033"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${cross}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220915 12:12:12.036" level="INFO">Clicking button 'xpath://*[@class="_2KpZ6l _2doB4z"]'.</msg>
+<status status="PASS" starttime="20220915 12:12:12.033" endtime="20220915 12:12:12.268"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:02.298" endtime="20220915 12:12:12.269"/>
+</kw>
+<kw name="AND User Searchs For A Product" library="Instructions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${searchbar}</arg>
+<arg>${product}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220915 12:12:12.271" level="INFO">Typing text 'Iphone 12 mini' into text field 'xpath://*[@class="_3704LK"]'.</msg>
+<status status="PASS" starttime="20220915 12:12:12.270" endtime="20220915 12:12:12.551"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:12:15.559" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:12:12.551" endtime="20220915 12:12:15.559"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Entersearch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:12:15.560" level="INFO">Clicking element 'xpath://*[@class="L0Z3Pu"]'.</msg>
+<status status="PASS" starttime="20220915 12:12:15.559" endtime="20220915 12:12:15.690"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:12:18.694" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:12:15.690" endtime="20220915 12:12:18.694"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:12.269" endtime="20220915 12:12:18.694"/>
+</kw>
+<kw name="AND User Should Scroll to 6th Element" library="Instructions">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Device}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220915 12:12:18.696" endtime="20220915 12:12:19.041"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:18.696" endtime="20220915 12:12:19.041"/>
+</kw>
+<kw name="Then User Clicks That Element" library="Instructions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Device}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:12:19.043" level="INFO">Clicking element 'xpath://div[normalize-space()='APPLE iPhone 12 Mini (White, 128 GB)']'.</msg>
+<status status="PASS" starttime="20220915 12:12:19.042" endtime="20220915 12:12:19.214"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220915 12:12:22.216" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220915 12:12:19.214" endtime="20220915 12:12:22.216"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:19.042" endtime="20220915 12:12:22.216"/>
+</kw>
+<kw name="Then User Add's To Cart" library="Instructions">
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>New</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220915 12:12:22.219" endtime="20220915 12:12:22.321"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addtocart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220915 12:12:22.323" level="INFO">Clicking element 'xpath://*[@class='_2KpZ6l _2U9uOA _3v1-ww']'.</msg>
+<status status="PASS" starttime="20220915 12:12:22.322" endtime="20220915 12:12:30.739"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:22.217" endtime="20220915 12:12:30.739"/>
+</kw>
+<kw name="Then User Verify The Item" library="Instructions">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${Desired Device}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220915 12:12:30.792" level="INFO">Current page contains text 'APPLE iPhone 12 Mini (White, 128 GB)'.</msg>
+<status status="PASS" starttime="20220915 12:12:30.740" endtime="20220915 12:12:30.792"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220915 12:12:30.792" endtime="20220915 12:12:33.192"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:30.739" endtime="20220915 12:12:33.193"/>
+</kw>
+<status status="PASS" starttime="20220915 12:12:02.296" endtime="20220915 12:12:33.194"/>
+</test>
+<status status="PASS" starttime="20220915 12:12:01.839" endtime="20220915 12:12:33.196"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
